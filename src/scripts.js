@@ -1,5 +1,6 @@
-function romanIn(input){
+export function romanIn(input){
   var numerals = [];
+  console.log("Entry");
   if(input >= 1000)
   {
     while(input >= 1000)
@@ -62,7 +63,6 @@ function romanIn(input){
         numerals.push("X");
         input -= 10;
       }
-
     }
   }
   if(input >=5)
@@ -99,13 +99,4 @@ function romanIn(input){
   numerals = numerals.join('');
   console.log(numerals);
   return numerals;
-};
-
-$(document).ready(function(){
-  $("form#transportation_survey").submit(function(event){
-      var input = $("#phrase").val();
-      var input = romanIn(parseInt(input));
-    console.log(input);
-    event.preventDefault();
-    });
-  });
+}
